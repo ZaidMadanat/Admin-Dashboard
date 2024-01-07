@@ -10,7 +10,7 @@ body {
 }
 .container { 
     display: grid; 
-    grid-template-columns: 0.5fr 2fr 1fr;
+    grid-template-columns: 0.5fr 3fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 4px;
     height: 100vh;
@@ -24,9 +24,11 @@ body {
     margin-top: 20px;
 }
 
-
 .name {
     justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 .search-bar { 
     width: 500px;
@@ -41,20 +43,35 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / -1;   
 }
-.dash-title { 
+.dash-title {
+    display: flex;
     align-self: center;
+    align-items: cneter;
     margin-left: 10px;
     font-size: 2rem;
     font-weight: bold;
-    background-color: #ea580c;
-
+    margin-left: 10px;
 }
-
+.search { 
+    display: flex;
+    align-items: center;
+}
+.search img { 
+    align-self: center;
+    margin-right: 15px;
+}
+.dash-title span { 
+    align-self: center;
+    margin-left: 10px;
+}
 .info ul { 
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     font-size: 1.3rem;
     gap: 5px;
+}
+.help { 
+    margin-top: auto;
 }
 .help ul { 
     display: grid; 
@@ -64,35 +81,47 @@ body {
 }
 .projects { 
     align-self: center;
+    justify-self: center;
     display: grid;
     grid-column: 2 / 3;
-    gap: 10px;
+    gap: 40px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr))
-
+    grid-template-rows: max-content;
+    
 }
 
 .announcments {
+    align-self: center;
     grid-column: 3 / 4;
     display: grid; 
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
 }
-.updates { 
-    margin-top: 10vh;
-    border: solid white;
-    border-radius: 0.5rem;
-}
+
 .important { 
     border: solid white;
     border-radius: 0.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    text-align: center;
 }
-
+.updates { 
+    margin-top: 50px;
+}
+p { 
+    margin: 0.7rem;
+}
+.people { 
+    font-size: 1.2rem;
+}
+.tag { 
+    font-size: 1.5rem;
+}
 .card { 
     border-radius: 10px;
     border: solid white;
     border-radius: 0.5rem;
     background: rgb(235, 227, 227);
+    max-width: 500px;
 }
 li { 
     list-style-type: none;
@@ -109,6 +138,12 @@ img {
     width: 35px;
     height: 35px;
 }
-.updates { 
-    height: 500px;
+.news { 
+    height: fit-content;
+    border: solid white;
+    border-radius: 0.5rem;
+
+}
+.important { 
+    height: 250px;
 }
